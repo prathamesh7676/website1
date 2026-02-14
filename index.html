@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalKart - Premium Local Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Premium Look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Main App Content -->
+    <div id="app-content">
+
+        <!-- Header -->
+        <header>
+            <div class="logo">LocalKart</div>
+            <div class="header-controls">
+                <div class="location-display" id="user-location">My Location</div>
+                <div class="cart-icon" id="cart-btn">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Quality Local Products.</h2>
+                <p>Curated selection of the finest goods from your community.</p>
+                <button class="cta-btn"
+                    onclick="document.getElementById('product-grid').scrollIntoView({behavior: 'smooth'})">Shop
+                    Collection</button>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <main>
+            <h3>Trending Near You</h3>
+            <div id="product-grid" class="grid">
+                <!-- Products will be injected here by JS -->
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>LocalKart</h4>
+                    <p>Connecting communities with the best local products.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Sell with Us</a>
+                    <a href="#">Support</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LocalKart. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Cart</h2>
+                <button id="close-cart" class="close-btn">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be injected here -->
+                <p class="empty-msg">Your cart is empty.</p>
+            </div>
+            <div class="cart-footer">
+                <div class="total">Total: ₹<span id="cart-total">0.00</span></div>
+                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
